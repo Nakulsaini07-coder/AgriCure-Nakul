@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: agricure-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      - key: VITE_THINGSPEAK_API_KEY
+        value: H249ISKWNBTX3MEV
+      - key: VITE_THINGSPEAK_CHANNEL_ID
+        value: "3014718"
+      - key: VITE_APP_NAME
+        value: AgriCure
+      - key: VITE_APP_VERSION
+        value: "1.0.0"
